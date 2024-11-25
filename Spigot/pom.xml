@@ -49,7 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.1-SNAPSHOT</version>
+                <version>3.4.1</version>
                 <configuration>
                     <minimizeJar>true</minimizeJar>
                     <relocations>
@@ -76,6 +76,22 @@
                         <relocation>
                             <pattern>com.google.common</pattern>
                             <shadedPattern>me.darkeyedragon.randomtp.shaded.google</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>co.aikar.commands</pattern>
+                            <shadedPattern>me.darkeyedragon.randomtp.shaded.acf</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>co.aikar.locales</pattern>
+                            <shadedPattern>me.darkeyedragon.randomtp.shaded.locales</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>org.yaml.snakeyaml</pattern>
+                            <shadedPattern>me.darkeyedragon.randomtp.shaded.snakeyaml</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>org.spongepowered.configurate</pattern>
+                            <shadedPattern>me.darkeyedragon.randomtp.shaded.configurate</shadedPattern>
                         </relocation>
                     </relocations>
                     <filters>
@@ -177,7 +193,7 @@
         <dependency>
             <groupId>co.aikar</groupId>
             <artifactId>acf-paper</artifactId>
-            <version>0.5.0-SNAPSHOT</version>
+            <version>0.5.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.papermc</groupId>
